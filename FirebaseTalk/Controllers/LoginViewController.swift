@@ -10,6 +10,8 @@ import SnapKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
@@ -18,9 +20,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let statusBar = UIView()
         
+        try! Auth.auth().signOut()
+        
+        let statusBar = UIView()
         let statusBarHeight = UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.safeAreaInsets.top ?? 0
         
         self.view.addSubview(statusBar)
@@ -36,6 +39,25 @@ class LoginViewController: UIViewController {
         signupButton.backgroundColor = UIColor(hex: color)
         
         signupButton.addTarget(self, action: #selector(presentSignup), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
+        
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if(user != nil) {
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                self.present(view, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @objc func loginEvent() {
+        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { user, err in
+            if(err != nil) {
+                let alert = UIAlertController(title: "에러", message: err.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                
+                alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+                self.present( alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @objc func presentSignup()
