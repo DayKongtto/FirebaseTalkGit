@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -202,19 +202,19 @@
     </scenes>
     <designables>
         <designable name="Rff-XS-9jb">
-            <size key="intrinsicContentSize" width="61" height="30.5"/>
+            <size key="intrinsicContentSize" width="75" height="35.5"/>
         </designable>
         <designable name="TnE-us-8H2">
-            <size key="intrinsicContentSize" width="76.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="90.5" height="28.5"/>
         </designable>
         <designable name="ZSi-JA-zoJ">
-            <size key="intrinsicContentSize" width="99" height="30.5"/>
+            <size key="intrinsicContentSize" width="113" height="35.5"/>
         </designable>
         <designable name="bEO-QK-64U">
-            <size key="intrinsicContentSize" width="52" height="23.5"/>
+            <size key="intrinsicContentSize" width="66" height="28.5"/>
         </designable>
         <designable name="dOZ-IJ-Dhb">
-            <size key="intrinsicContentSize" width="48.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="28.5"/>
         </designable>
     </designables>
     <resources>
