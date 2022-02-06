@@ -183,6 +183,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="취소"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="alL-ua-ggn">
+                                <rect key="frame" x="157" y="191" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gU6-of-ZVh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -190,6 +194,7 @@
                     <connections>
                         <outlet property="cancel" destination="iWz-XY-vMU" id="399-O6-lda"/>
                         <outlet property="email" destination="dOZ-IJ-Dhb" id="fPU-AG-g0z"/>
+                        <outlet property="imageView" destination="alL-ua-ggn" id="WYf-rd-isd"/>
                         <outlet property="name" destination="bEO-QK-64U" id="hLH-Cd-5H8"/>
                         <outlet property="password" destination="TnE-us-8H2" id="ry9-j8-kyO"/>
                         <outlet property="signup" destination="wdp-gR-XyL" id="Kjk-40-a5n"/>
@@ -218,6 +223,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="addPhoto" width="510" height="476"/>
         <image name="loadingIcon" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

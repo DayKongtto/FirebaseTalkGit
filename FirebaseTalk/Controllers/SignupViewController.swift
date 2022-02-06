@@ -9,9 +9,11 @@ import UIKit
 import SnapKit
 import Firebase
 import TextFieldEffects
+import FirebaseStorage
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var email: HoshiTextField!
     @IBOutlet weak var name: HoshiTextField!
     @IBOutlet weak var password: HoshiTextField!
@@ -38,6 +40,10 @@ class SignupViewController: UIViewController {
         color = remoteConfig["splash_background"].stringValue
         
         statusBar.backgroundColor = UIColor(hex: color)
+        
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePicker)))
+        
         signup.backgroundColor = UIColor(hex: color)
         cancel.backgroundColor = UIColor(hex: color)
         
@@ -45,12 +51,40 @@ class SignupViewController: UIViewController {
         cancel.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
     }
     
+    @objc func imagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[.originalImage] as! UIImage
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func signupEvent() {
         Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (result, err) in
             let uid = result?.user.uid
+            let image = self.imageView.image?.jpegData(compressionQuality: 0.1)
             
-            Database.database().reference().child("users").child(uid!).setValue(["name":self.name.text!])
+            let imageRef = Storage.storage().reference().child("userImages").child(uid!)
+            imageRef.putData(image!, metadata: nil) { data, err in
+                imageRef.downloadURL { url, err in
+                    guard let imgURL =  url else {
+                        print("image upload fail")
+                        return
+                    }
+                    print("image upload success")
+                    Database.database().reference().child("users").child(uid!).setValue(["userName":self.name.text!,"profileImageURL": imgURL.absoluteString])
+                }
+            }
+            
         }
+        
+        
     }
     
     @objc func cancelEvent() {
