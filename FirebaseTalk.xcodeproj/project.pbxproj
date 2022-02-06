@@ -14,11 +14,12 @@
 		69260794271ADC94005321D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260792271ADC94005321D8 /* Main.storyboard */; };
 		69260796271ADC95005321D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69260795271ADC95005321D8 /* Assets.xcassets */; };
 		69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260797271ADC95005321D8 /* LaunchScreen.storyboard */; };
-		69382731271AF554008AFB88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382730271AF554008AFB88 /* GoogleService-Info.plist */; };
 		69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382732271AFA8E008AFB88 /* SplashViewController.swift */; };
 		69382735271C64D2008AFB88 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382734271C64D2008AFB88 /* UIColor.swift */; };
 		69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */; };
 		69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382738271C6B22008AFB88 /* LoginViewController.swift */; };
+		69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A125F9279CDEB50067AA32 /* SignupViewController.swift */; };
+		69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +33,12 @@
 		69260795271ADC95005321D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69260798271ADC95005321D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6926079A271ADC95005321D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69382730271AF554008AFB88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69382732271AFA8E008AFB88 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		69382734271C64D2008AFB88 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		69382738271C6B22008AFB88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		69A125F9279CDEB50067AA32 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCAB0EFA2409FEC136A632E3 /* Pods_FirebaseTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,7 +92,7 @@
 				69260795271ADC95005321D8 /* Assets.xcassets */,
 				69260797271ADC95005321D8 /* LaunchScreen.storyboard */,
 				6926079A271ADC95005321D8 /* Info.plist */,
-				69382730271AF554008AFB88 /* GoogleService-Info.plist */,
+				69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */,
 				69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */,
 			);
 			path = FirebaseTalk;
@@ -102,6 +104,7 @@
 				69260790271ADC94005321D8 /* ViewController.swift */,
 				69382732271AFA8E008AFB88 /* SplashViewController.swift */,
 				69382738271C6B22008AFB88 /* LoginViewController.swift */,
+				69A125F9279CDEB50067AA32 /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,7 +187,7 @@
 			files = (
 				69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */,
 				69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */,
-				69382731271AF554008AFB88 /* GoogleService-Info.plist in Resources */,
+				69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */,
 				69260796271ADC95005321D8 /* Assets.xcassets in Resources */,
 				69260794271ADC94005321D8 /* Main.storyboard in Resources */,
 			);
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */,
+				69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */,
 				69260791271ADC94005321D8 /* ViewController.swift in Sources */,
 				6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */,
 				6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */,
@@ -392,25 +396,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QS9LS8FVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseTalk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = psj.FirebaseTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = psj.hsh.FirebaseTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,25 +429,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QS9LS8FVP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseTalk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = psj.FirebaseTalk;
+				PRODUCT_BUNDLE_IDENTIFIER = psj.hsh.FirebaseTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

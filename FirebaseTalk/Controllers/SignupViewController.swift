@@ -1,17 +1,23 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  FirebaseTalk
 //
-//  Created by PSJ on 2021/10/17.
+//  Created by PSJ on 2022/01/23.
 //
 
 import UIKit
 import SnapKit
 import Firebase
+import TextFieldEffects
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signupButton: UIButton!
+class SignupViewController: UIViewController {
+    
+    @IBOutlet weak var email: HoshiTextField!
+    @IBOutlet weak var name: HoshiTextField!
+    @IBOutlet weak var password: HoshiTextField!
+    @IBOutlet weak var signup: UIButton!
+    @IBOutlet weak var cancel: UIButton!
+    
     
     let remoteConfig = RemoteConfig.remoteConfig()
     var color : String! = nil
@@ -32,17 +38,8 @@ class LoginViewController: UIViewController {
         color = remoteConfig["splash_background"].stringValue
         
         statusBar.backgroundColor = UIColor(hex: color)
-        loginButton.backgroundColor = UIColor(hex: color)
-        signupButton.backgroundColor = UIColor(hex: color)
-        
-        signupButton.addTarget(self, action: #selector(presentSignup), for: .touchUpInside)
-    }
-    
-    @objc func presentSignup()
-    {
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
-        
-        self.present(view, animated: true, completion: nil)
+        signup.backgroundColor = UIColor(hex: color)
+        cancel.backgroundColor = UIColor(hex: color)
     }
     
 
