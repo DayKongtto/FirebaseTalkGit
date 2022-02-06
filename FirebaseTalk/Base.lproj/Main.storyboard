@@ -57,7 +57,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-JA-zoJ" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="40" y="392" width="334" height="35.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" systemColor="systemRedColor"/>
@@ -113,13 +113,30 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="email" destination="Rff-XS-9jb" id="gbz-e6-ay5"/>
                         <outlet property="loginButton" destination="Nu3-OQ-9HD" id="y3v-uY-EqV"/>
+                        <outlet property="password" destination="ZSi-JA-zoJ" id="Bwa-Dj-8BG"/>
                         <outlet property="signupButton" destination="GgZ-dT-sdm" id="BQh-os-YtD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPS-ik-WiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="98"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="pEW-oW-l56">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="2YX-3F-Lx7" customClass="MainViewController" customModule="FirebaseTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFX-VJ-5ya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hi9-BH-kby"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94X-Eh-mMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="101"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="zOm-kh-2fJ">
@@ -161,7 +178,7 @@
                                 <rect key="frame" x="20" y="383" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" systemColor="systemRedColor"/>
@@ -210,10 +227,10 @@
             <size key="intrinsicContentSize" width="75" height="35.5"/>
         </designable>
         <designable name="TnE-us-8H2">
-            <size key="intrinsicContentSize" width="90.5" height="28.5"/>
+            <size key="intrinsicContentSize" width="90.5" height="27"/>
         </designable>
         <designable name="ZSi-JA-zoJ">
-            <size key="intrinsicContentSize" width="113" height="35.5"/>
+            <size key="intrinsicContentSize" width="113" height="34"/>
         </designable>
         <designable name="bEO-QK-64U">
             <size key="intrinsicContentSize" width="66" height="28.5"/>
