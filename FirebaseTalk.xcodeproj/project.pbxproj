@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DB3576ADDB409FAB5762006 /* Pods_FirebaseTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB0EFA2409FEC136A632E3 /* Pods_FirebaseTalk.framework */; };
+		6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926078C271ADC94005321D8 /* AppDelegate.swift */; };
+		6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926078E271ADC94005321D8 /* SceneDelegate.swift */; };
+		69260791271ADC94005321D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69260790271ADC94005321D8 /* ViewController.swift */; };
+		69260794271ADC94005321D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260792271ADC94005321D8 /* Main.storyboard */; };
+		69260796271ADC95005321D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69260795271ADC95005321D8 /* Assets.xcassets */; };
+		69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260797271ADC95005321D8 /* LaunchScreen.storyboard */; };
+		69382731271AF554008AFB88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382730271AF554008AFB88 /* GoogleService-Info.plist */; };
+		69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382732271AFA8E008AFB88 /* SplashViewController.swift */; };
+		69382735271C64D2008AFB88 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382734271C64D2008AFB88 /* UIColor.swift */; };
+		69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */; };
+		69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382738271C6B22008AFB88 /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3489F77687D1EC9A85FA4A83 /* Pods-FirebaseTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTalk.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseTalk/Pods-FirebaseTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		47F423CBF3352C9740F608FA /* Pods-FirebaseTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseTalk.release.xcconfig"; path = "Target Support Files/Pods-FirebaseTalk/Pods-FirebaseTalk.release.xcconfig"; sourceTree = "<group>"; };
+		69260789271ADC94005321D8 /* FirebaseTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6926078C271ADC94005321D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6926078E271ADC94005321D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		69260790271ADC94005321D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69260793271ADC94005321D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69260795271ADC95005321D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69260798271ADC95005321D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6926079A271ADC95005321D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69382730271AF554008AFB88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69382732271AFA8E008AFB88 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		69382734271C64D2008AFB88 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		69382738271C6B22008AFB88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FCAB0EFA2409FEC136A632E3 /* Pods_FirebaseTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69260786271ADC94005321D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB3576ADDB409FAB5762006 /* Pods_FirebaseTalk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		547E0A0E9258A32BF981D3EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3489F77687D1EC9A85FA4A83 /* Pods-FirebaseTalk.debug.xcconfig */,
+				47F423CBF3352C9740F608FA /* Pods-FirebaseTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		69260780271ADC94005321D8 = {
+			isa = PBXGroup;
+			children = (
+				6926078B271ADC94005321D8 /* FirebaseTalk */,
+				6926078A271ADC94005321D8 /* Products */,
+				547E0A0E9258A32BF981D3EB /* Pods */,
+				C57CD91A560F7BCF52318B9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6926078A271ADC94005321D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69260789271ADC94005321D8 /* FirebaseTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6926078B271ADC94005321D8 /* FirebaseTalk */ = {
+			isa = PBXGroup;
+			children = (
+				6938272F271AF27E008AFB88 /* Extensions */,
+				6938272E271AF268008AFB88 /* Controllers */,
+				6926078C271ADC94005321D8 /* AppDelegate.swift */,
+				6926078E271ADC94005321D8 /* SceneDelegate.swift */,
+				69260792271ADC94005321D8 /* Main.storyboard */,
+				69260795271ADC95005321D8 /* Assets.xcassets */,
+				69260797271ADC95005321D8 /* LaunchScreen.storyboard */,
+				6926079A271ADC95005321D8 /* Info.plist */,
+				69382730271AF554008AFB88 /* GoogleService-Info.plist */,
+				69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */,
+			);
+			path = FirebaseTalk;
+			sourceTree = "<group>";
+		};
+		6938272E271AF268008AFB88 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69260790271ADC94005321D8 /* ViewController.swift */,
+				69382732271AFA8E008AFB88 /* SplashViewController.swift */,
+				69382738271C6B22008AFB88 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6938272F271AF27E008AFB88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69382734271C64D2008AFB88 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C57CD91A560F7BCF52318B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCAB0EFA2409FEC136A632E3 /* Pods_FirebaseTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69260788271ADC94005321D8 /* FirebaseTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6926079D271ADC95005321D8 /* Build configuration list for PBXNativeTarget "FirebaseTalk" */;
+			buildPhases = (
+				2F2271BEEBAB821CAF763B6B /* [CP] Check Pods Manifest.lock */,
+				69260785271ADC94005321D8 /* Sources */,
+				69260786271ADC94005321D8 /* Frameworks */,
+				69260787271ADC94005321D8 /* Resources */,
+				231154268D2E3D19B0B124A2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirebaseTalk;
+			productName = FirebaseTalk;
+			productReference = 69260789271ADC94005321D8 /* FirebaseTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69260781271ADC94005321D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					69260788271ADC94005321D8 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 69260784271ADC94005321D8 /* Build configuration list for PBXProject "FirebaseTalk" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69260780271ADC94005321D8;
+			productRefGroup = 6926078A271ADC94005321D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69260788271ADC94005321D8 /* FirebaseTalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69260787271ADC94005321D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */,
+				69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */,
+				69382731271AF554008AFB88 /* GoogleService-Info.plist in Resources */,
+				69260796271ADC95005321D8 /* Assets.xcassets in Resources */,
+				69260794271ADC94005321D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		231154268D2E3D19B0B124A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseTalk/Pods-FirebaseTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseTalk/Pods-FirebaseTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseTalk/Pods-FirebaseTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F2271BEEBAB821CAF763B6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69260785271ADC94005321D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */,
+				69260791271ADC94005321D8 /* ViewController.swift in Sources */,
+				6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */,
+				6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */,
+				69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */,
+				69382735271C64D2008AFB88 /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		69260792271ADC94005321D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69260793271ADC94005321D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69260797271ADC95005321D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69260798271ADC95005321D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6926079B271ADC95005321D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6926079C271ADC95005321D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6926079E271ADC95005321D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3489F77687D1EC9A85FA4A83 /* Pods-FirebaseTalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = psj.FirebaseTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6926079F271ADC95005321D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F423CBF3352C9740F608FA /* Pods-FirebaseTalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = psj.FirebaseTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69260784271ADC94005321D8 /* Build configuration list for PBXProject "FirebaseTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6926079B271ADC95005321D8 /* Debug */,
+				6926079C271ADC95005321D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6926079D271ADC95005321D8 /* Build configuration list for PBXNativeTarget "FirebaseTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6926079E271ADC95005321D8 /* Debug */,
+				6926079F271ADC95005321D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69260781271ADC94005321D8 /* Project object */;
+}
