@@ -12,12 +12,12 @@ import Firebase
 class SplashViewController: UIViewController {
 
     var box = UIImageView()
-    var remoteConfig: RemoteConfig!
+    var remoteConfig: RemoteConfig?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         remoteConfig = RemoteConfig.remoteConfig()
+        guard let remoteConfig = remoteConfig else { return }
         let settings = RemoteConfigSettings()
         settings.minimumFetchInterval = 0
         remoteConfig.configSettings = settings
@@ -26,7 +26,7 @@ class SplashViewController: UIViewController {
         remoteConfig.fetch { (status, error) -> Void in
           if status == .success {
             print("Config fetched!")
-            self.remoteConfig.activate { changed, error in
+            self.remoteConfig?.activate { changed, error in
               // ...
             }
           } else {
@@ -44,11 +44,11 @@ class SplashViewController: UIViewController {
     }
 
     func displayWelcome() {
-        let color = remoteConfig["splash_background"].stringValue
-        let caps = remoteConfig["splash_message_cap"].boolValue
-        let message = remoteConfig["splash_message"].stringValue
+        let color = remoteConfig?["splash_background"].stringValue
+        let caps = remoteConfig?["splash_message_cap"].boolValue
+        let message = remoteConfig?["splash_message"].stringValue
         
-        if caps {
+        if caps == true {
             let alert = UIAlertController(title: "공지사항", message: message, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: { (action) in
                 exit(0)
@@ -63,7 +63,7 @@ class SplashViewController: UIViewController {
             }
         }
         
-        if let backColor: String = color {
+        if let backColor = color {
             self.view.backgroundColor = UIColor(hex: backColor)
         }
     }

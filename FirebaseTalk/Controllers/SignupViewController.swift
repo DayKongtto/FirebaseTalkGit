@@ -14,12 +14,11 @@ import FirebaseStorage
 class SignupViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var email: HoshiTextField!
-    @IBOutlet weak var name: HoshiTextField!
-    @IBOutlet weak var password: HoshiTextField!
-    @IBOutlet weak var signup: UIButton!
-    @IBOutlet weak var cancel: UIButton!
-    
+    @IBOutlet private weak var email: HoshiTextField!
+    @IBOutlet private weak var name: HoshiTextField!
+    @IBOutlet private weak var password: HoshiTextField!
+    @IBOutlet private weak var signup: UIButton!
+    @IBOutlet private weak var cancel: UIButton!
     
     let remoteConfig = RemoteConfig.remoteConfig()
     var color : String! = nil
@@ -61,7 +60,7 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageView.image = info[.originalImage] as! UIImage
+        imageView.image = info[.originalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
     
