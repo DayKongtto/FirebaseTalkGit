@@ -18,6 +18,7 @@
 		69382735271C64D2008AFB88 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382734271C64D2008AFB88 /* UIColor.swift */; };
 		69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */; };
 		69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382738271C6B22008AFB88 /* LoginViewController.swift */; };
+		693A767127B88FE600ADB2B2 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A767027B88FE600ADB2B2 /* RemoteConfig.swift */; };
 		69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A125F9279CDEB50067AA32 /* SignupViewController.swift */; };
 		69A8B49627AFEAC10062B973 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 69A8B49527AFEAC10062B973 /* .swiftlint.yml */; };
 		69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */; };
@@ -38,6 +39,7 @@
 		69382734271C64D2008AFB88 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		69382738271C6B22008AFB88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		693A767027B88FE600ADB2B2 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		69A125F9279CDEB50067AA32 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		69A8B49527AFEAC10062B973 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				69382734271C64D2008AFB88 /* UIColor.swift */,
+				693A767027B88FE600ADB2B2 /* RemoteConfig.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */,
 				69382735271C64D2008AFB88 /* UIColor.swift in Sources */,
 				690A1A7D27AFC9F10056BE12 /* MainViewController.swift in Sources */,
+				693A767127B88FE600ADB2B2 /* RemoteConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
