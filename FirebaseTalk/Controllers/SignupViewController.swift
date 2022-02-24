@@ -11,18 +11,14 @@ import Firebase
 import TextFieldEffects
 import FirebaseStorage
 
-class SignupViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class SignupViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var email: HoshiTextField!
-    @IBOutlet weak var name: HoshiTextField!
-    @IBOutlet weak var password: HoshiTextField!
-    @IBOutlet weak var signup: UIButton!
-    @IBOutlet weak var cancel: UIButton!
-    
-    
-    let remoteConfig = RemoteConfig.remoteConfig()
-    var color : String! = nil
+    @IBOutlet private weak var imageView: UIImageView?
+    @IBOutlet private weak var email: HoshiTextField?
+    @IBOutlet private weak var name: HoshiTextField?
+    @IBOutlet private weak var password: HoshiTextField?
+    @IBOutlet private weak var signup: UIButton?
+    @IBOutlet private weak var cancel: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,61 +33,50 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
             make.height.equalTo(statusBarHeight)
         }
         
-        color = remoteConfig["splash_background"].stringValue
+        let remoteConfig = RemoteConfig.remoteConfig()
+        guard let color = remoteConfig.getBackGroundColor(remoteConfig) else { return }
         
-        statusBar.backgroundColor = UIColor(hex: color)
+        statusBar.backgroundColor = color
         
-        imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePicker)))
+        imageView?.isUserInteractionEnabled = true
+        imageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePicker)))
         
-        signup.backgroundColor = UIColor(hex: color)
-        cancel.backgroundColor = UIColor(hex: color)
+        signup?.backgroundColor = color
+        cancel?.backgroundColor = color
         
-        signup.addTarget(self, action: #selector(signupEvent), for: .touchUpInside)
-        cancel.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
-    }
-    
-    @objc func imagePicker() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageView.image = info[.originalImage] as! UIImage
-        dismiss(animated: true, completion: nil)
+        signup?.addTarget(self, action: #selector(signupEvent), for: .touchUpInside)
+        cancel?.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
     }
     
     @objc func signupEvent() {
-        Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (result, err) in
+        guard let emailText = email?.text else { return }
+        guard let passwordText = password?.text else { return }
+        guard let nameText = name?.text else { return }
+        
+        Auth.auth().createUser(withEmail: emailText, password: passwordText) { result, _ in
             let uid = result?.user.uid
-            let image = self.imageView.image?.jpegData(compressionQuality: 0.1)
+            let image = self.imageView?.image?.jpegData(compressionQuality: 0.1)
             
             let imageRef = Storage.storage().reference().child("userImages").child(uid!)
-            imageRef.putData(image!, metadata: nil) { data, err in
-                imageRef.downloadURL { url, err in
-                    guard let imgURL =  url else {
+            imageRef.putData(image!, metadata: nil) { _, _ in
+                imageRef.downloadURL { url, _ in
+                    guard let imgURL = url else {
                         print("image upload fail")
                         return
                     }
                     print("image upload success")
-                    Database.database().reference().child("users").child(uid!).setValue(["userName":self.name.text!,"profileImageURL": imgURL.absoluteString])
+                    Database.database().reference().child("users").child(uid!)
+                        .setValue(["userName": nameText, "profileImageURL": imgURL.absoluteString])
                 }
             }
             
         }
-        
-        
     }
     
     @objc func cancelEvent() {
         self.dismiss(animated: true, completion: nil)
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -102,4 +87,22 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     */
 
+}
+
+extension SignupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    @objc func imagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        imageView?.image = info[.originalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
 }

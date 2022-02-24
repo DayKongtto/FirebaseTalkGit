@@ -11,7 +11,6 @@
 		690A1A7D27AFC9F10056BE12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A1A7C27AFC9F10056BE12 /* MainViewController.swift */; };
 		6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926078C271ADC94005321D8 /* AppDelegate.swift */; };
 		6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6926078E271ADC94005321D8 /* SceneDelegate.swift */; };
-		69260791271ADC94005321D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69260790271ADC94005321D8 /* ViewController.swift */; };
 		69260794271ADC94005321D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260792271ADC94005321D8 /* Main.storyboard */; };
 		69260796271ADC95005321D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69260795271ADC95005321D8 /* Assets.xcassets */; };
 		69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69260797271ADC95005321D8 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,9 @@
 		69382735271C64D2008AFB88 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382734271C64D2008AFB88 /* UIColor.swift */; };
 		69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */; };
 		69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382738271C6B22008AFB88 /* LoginViewController.swift */; };
+		693A767127B88FE600ADB2B2 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A767027B88FE600ADB2B2 /* RemoteConfig.swift */; };
 		69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A125F9279CDEB50067AA32 /* SignupViewController.swift */; };
+		69A8B49627AFEAC10062B973 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 69A8B49527AFEAC10062B973 /* .swiftlint.yml */; };
 		69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +31,6 @@
 		69260789271ADC94005321D8 /* FirebaseTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6926078C271ADC94005321D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6926078E271ADC94005321D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69260790271ADC94005321D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69260793271ADC94005321D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69260795271ADC95005321D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69260798271ADC95005321D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +39,9 @@
 		69382734271C64D2008AFB88 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		69382738271C6B22008AFB88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		693A767027B88FE600ADB2B2 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		69A125F9279CDEB50067AA32 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		69A8B49527AFEAC10062B973 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCAB0EFA2409FEC136A632E3 /* Pods_FirebaseTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		69260780271ADC94005321D8 = {
 			isa = PBXGroup;
 			children = (
+				69A8B49527AFEAC10062B973 /* .swiftlint.yml */,
 				6926078B271ADC94005321D8 /* FirebaseTalk */,
 				6926078A271ADC94005321D8 /* Products */,
 				547E0A0E9258A32BF981D3EB /* Pods */,
@@ -103,7 +106,6 @@
 		6938272E271AF268008AFB88 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				69260790271ADC94005321D8 /* ViewController.swift */,
 				69382732271AFA8E008AFB88 /* SplashViewController.swift */,
 				69382738271C6B22008AFB88 /* LoginViewController.swift */,
 				69A125F9279CDEB50067AA32 /* SignupViewController.swift */,
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				69382734271C64D2008AFB88 /* UIColor.swift */,
+				693A767027B88FE600ADB2B2 /* RemoteConfig.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				69260786271ADC94005321D8 /* Frameworks */,
 				69260787271ADC94005321D8 /* Resources */,
 				231154268D2E3D19B0B124A2 /* [CP] Embed Pods Frameworks */,
+				69A8B49727AFEAED0062B973 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A8B49627AFEAC10062B973 /* .swiftlint.yml in Resources */,
 				69260799271ADC95005321D8 /* LaunchScreen.storyboard in Resources */,
 				69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */,
 				69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */,
@@ -238,6 +243,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69A8B49727AFEAED0062B973 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,12 +269,12 @@
 			files = (
 				69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */,
 				69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */,
-				69260791271ADC94005321D8 /* ViewController.swift in Sources */,
 				6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */,
 				6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */,
 				69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */,
 				69382735271C64D2008AFB88 /* UIColor.swift in Sources */,
 				690A1A7D27AFC9F10056BE12 /* MainViewController.swift in Sources */,
+				693A767127B88FE600ADB2B2 /* RemoteConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

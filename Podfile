@@ -17,4 +17,6 @@ target 'FirebaseTalk' do
 
 	pod 'TextFieldEffects'
 
+	pod 'SwiftLint'
+
 end
