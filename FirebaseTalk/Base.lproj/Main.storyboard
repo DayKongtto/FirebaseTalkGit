@@ -260,7 +260,6 @@
                 <tabBarController storyboardIdentifier="MainViewTabbarController" automaticallyAdjustsScrollViewInsets="NO" id="zWR-G2-3a8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kyt-yx-VXK">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -277,27 +276,27 @@
     </scenes>
     <designables>
         <designable name="Rff-XS-9jb">
-            <size key="intrinsicContentSize" width="61" height="30.5"/>
+            <size key="intrinsicContentSize" width="75" height="35.5"/>
         </designable>
         <designable name="TnE-us-8H2">
-            <size key="intrinsicContentSize" width="76.5" height="22"/>
+            <size key="intrinsicContentSize" width="90.5" height="27"/>
         </designable>
         <designable name="ZSi-JA-zoJ">
-            <size key="intrinsicContentSize" width="99" height="29"/>
+            <size key="intrinsicContentSize" width="113" height="34"/>
         </designable>
         <designable name="bEO-QK-64U">
-            <size key="intrinsicContentSize" width="52" height="23.5"/>
+            <size key="intrinsicContentSize" width="66" height="28.5"/>
         </designable>
         <designable name="dOZ-IJ-Dhb">
-            <size key="intrinsicContentSize" width="48.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="28.5"/>
         </designable>
     </designables>
     <resources>
-        <image name="account" width="40" height="40"/>
+        <image name="account" width="128" height="128"/>
         <image name="addPhoto" width="510" height="476"/>
-        <image name="chat" width="40" height="40"/>
+        <image name="chat" width="128" height="128"/>
         <image name="loadingIcon" width="128" height="128"/>
-        <image name="people" width="40" height="40"/>
+        <image name="people" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
