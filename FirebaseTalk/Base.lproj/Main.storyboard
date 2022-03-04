@@ -139,16 +139,45 @@
             </objects>
             <point key="canvasLocation" x="3508.6956521739135" y="100.44642857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="zoz-l7-AVw">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="Bj6-IY-yer" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="Bj6-IY-yer" customClass="ChatViewController" customModule="FirebaseTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Shf-BC-YSP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQN-zm-Yum">
+                                <rect key="frame" x="327" y="831" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="8i7-0I-aOC"/>
+                                    <constraint firstAttribute="width" constant="67" id="GU5-77-iDV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="전송"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-tx-WAF">
+                                <rect key="frame" x="20" y="828" width="297" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Mnc-C3-8QF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Wif-Q3-I1G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wif-Q3-I1G" firstAttribute="trailing" secondItem="EQN-zm-Yum" secondAttribute="trailing" constant="20" id="UgD-Mr-06h"/>
+                            <constraint firstItem="EQN-zm-Yum" firstAttribute="leading" secondItem="5eu-tx-WAF" secondAttribute="trailing" constant="10" id="VnB-gH-4wY"/>
+                            <constraint firstItem="5eu-tx-WAF" firstAttribute="bottom" secondItem="Wif-Q3-I1G" secondAttribute="bottom" id="Yc2-xz-6gx"/>
+                            <constraint firstItem="EQN-zm-Yum" firstAttribute="bottom" secondItem="Wif-Q3-I1G" secondAttribute="bottom" id="cFS-Rk-5Bz"/>
+                            <constraint firstItem="5eu-tx-WAF" firstAttribute="leading" secondItem="Wif-Q3-I1G" secondAttribute="leading" constant="20" id="txZ-eL-I5O"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sendButton" destination="EQN-zm-Yum" id="WUC-SD-arv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHC-3n-ia8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

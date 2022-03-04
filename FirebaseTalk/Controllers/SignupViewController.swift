@@ -65,7 +65,9 @@ class SignupViewController: UIViewController {
                         return
                     }
                     print("image upload success")
-                    let values = ["userName": nameText, "profileImageURL": imgURL.absoluteString]
+                    let values = ["userName": nameText,
+                                  "profileImageURL": imgURL.absoluteString,
+                                  "uid": Auth.auth().currentUser?.uid]
                     Database.database().reference().child("users").child(uid)
                         .setValue(values) { err, _ in
                             if err == nil { self.cancelEvent() }
