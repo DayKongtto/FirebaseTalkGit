@@ -54,10 +54,10 @@ class SignupViewController: UIViewController {
         guard let nameText = name?.text else { return }
         
         Auth.auth().createUser(withEmail: emailText, password: passwordText) { result, _ in
-            let uid = result?.user.uid
+            guard let uid = result?.user.uid else { return }
             let image = self.imageView?.image?.jpegData(compressionQuality: 0.1)
             
-            let imageRef = Storage.storage().reference().child("userImages").child(uid!)
+            let imageRef = Storage.storage().reference().child("userImages").child(uid)
             imageRef.putData(image!, metadata: nil) { _, _ in
                 imageRef.downloadURL { url, _ in
                     guard let imgURL = url else {
@@ -65,8 +65,11 @@ class SignupViewController: UIViewController {
                         return
                     }
                     print("image upload success")
-                    Database.database().reference().child("users").child(uid!)
-                        .setValue(["userName": nameText, "profileImageURL": imgURL.absoluteString])
+                    let values = ["userName": nameText, "profileImageURL": imgURL.absoluteString]
+                    Database.database().reference().child("users").child(uid)
+                        .setValue(values) { err, _ in
+                            if err == nil { self.cancelEvent() }
+                        }
                 }
             }
             
