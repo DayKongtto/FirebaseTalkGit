@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak private var loginButton: UIButton?
     @IBOutlet weak private var signupButton: UIButton?
     
-    //let remoteConfig = RemoteConfig.remoteConfig()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

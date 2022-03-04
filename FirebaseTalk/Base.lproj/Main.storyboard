@@ -43,7 +43,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PRo-8l-uec"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -56,7 +56,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-JA-zoJ" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="40" y="392" width="334" height="35.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -123,21 +123,36 @@
             </objects>
             <point key="canvasLocation" x="820" y="98"/>
         </scene>
-        <!--People-->
+        <!--People View Controller-->
         <scene sceneID="pEW-oW-l56">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="2YX-3F-Lx7" customClass="MainViewController" customModule="FirebaseTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleViewController" id="2YX-3F-Lx7" customClass="PeopleViewController" customModule="FirebaseTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TFX-VJ-5ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Hi9-BH-kby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" image="people" id="Hfz-ha-EXe"/>
+                    <navigationItem key="navigationItem" id="5Ss-2w-o5W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94X-Eh-mMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600" y="100.44642857142857"/>
+            <point key="canvasLocation" x="3508.6956521739135" y="100.44642857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zoz-l7-AVw">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="Bj6-IY-yer" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shf-BC-YSP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wif-Q3-I1G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHC-3n-ia8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4309" y="98"/>
         </scene>
         <!--Account-->
         <scene sceneID="gol-3y-Tg9">
@@ -265,7 +280,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2YX-3F-Lx7" kind="relationship" relationship="viewControllers" id="V0k-Rb-CcX"/>
+                        <segue destination="pWU-dC-vyd" kind="relationship" relationship="viewControllers" id="V0k-Rb-CcX"/>
                         <segue destination="2ca-9q-VOh" kind="relationship" relationship="viewControllers" id="MBL-kh-WNx"/>
                         <segue destination="anN-ch-6Zi" kind="relationship" relationship="viewControllers" id="k9Q-vC-PBY"/>
                     </connections>
@@ -274,16 +289,35 @@
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="100.44642857142857"/>
         </scene>
+        <!--People-->
+        <scene sceneID="9YQ-HA-bY4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWU-dC-vyd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" image="people" id="Hfz-ha-EXe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YKc-GO-OSs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2YX-3F-Lx7" kind="relationship" relationship="rootViewController" id="4Zd-To-qd7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vu7-TY-Z9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2598.5507246376815" y="100.44642857142857"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="Rff-XS-9jb">
-            <size key="intrinsicContentSize" width="61" height="30.5"/>
+            <size key="intrinsicContentSize" width="48.5" height="23.5"/>
         </designable>
         <designable name="TnE-us-8H2">
             <size key="intrinsicContentSize" width="76.5" height="22"/>
         </designable>
         <designable name="ZSi-JA-zoJ">
-            <size key="intrinsicContentSize" width="99" height="29"/>
+            <size key="intrinsicContentSize" width="76.5" height="22"/>
         </designable>
         <designable name="bEO-QK-64U">
             <size key="intrinsicContentSize" width="52" height="23.5"/>
