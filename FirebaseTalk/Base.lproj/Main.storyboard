@@ -164,19 +164,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-Sj-XSF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="70" id="MhI-m6-jR0">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MhI-m6-jR0" id="htp-NB-Isa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bj6-IY-yer" id="tIu-DR-KqV"/>
+                                    <outlet property="delegate" destination="Bj6-IY-yer" id="aGn-fs-r4u"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wif-Q3-I1G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cT4-Sj-XSF" firstAttribute="leading" secondItem="Wif-Q3-I1G" secondAttribute="leading" id="5kB-AJ-KTn"/>
+                            <constraint firstItem="cT4-Sj-XSF" firstAttribute="top" secondItem="Wif-Q3-I1G" secondAttribute="top" id="854-Im-Aua"/>
                             <constraint firstItem="Wif-Q3-I1G" firstAttribute="trailing" secondItem="EQN-zm-Yum" secondAttribute="trailing" constant="20" id="UgD-Mr-06h"/>
                             <constraint firstItem="EQN-zm-Yum" firstAttribute="leading" secondItem="5eu-tx-WAF" secondAttribute="trailing" constant="10" id="VnB-gH-4wY"/>
                             <constraint firstItem="5eu-tx-WAF" firstAttribute="bottom" secondItem="Wif-Q3-I1G" secondAttribute="bottom" id="Yc2-xz-6gx"/>
+                            <constraint firstItem="Wif-Q3-I1G" firstAttribute="trailing" secondItem="cT4-Sj-XSF" secondAttribute="trailing" id="Zwk-wD-8Qi"/>
                             <constraint firstItem="EQN-zm-Yum" firstAttribute="bottom" secondItem="Wif-Q3-I1G" secondAttribute="bottom" id="cFS-Rk-5Bz"/>
+                            <constraint firstItem="5eu-tx-WAF" firstAttribute="top" secondItem="cT4-Sj-XSF" secondAttribute="bottom" constant="10" id="iCb-mK-60k"/>
                             <constraint firstItem="5eu-tx-WAF" firstAttribute="leading" secondItem="Wif-Q3-I1G" secondAttribute="leading" constant="20" id="txZ-eL-I5O"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="messageTextfield" destination="5eu-tx-WAF" id="oHj-p5-99n"/>
                         <outlet property="sendButton" destination="EQN-zm-Yum" id="WUC-SD-arv"/>
+                        <outlet property="tableView" destination="cT4-Sj-XSF" id="9tM-FD-KoU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHC-3n-ia8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -340,19 +364,19 @@
     </scenes>
     <designables>
         <designable name="Rff-XS-9jb">
-            <size key="intrinsicContentSize" width="48.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="28.5"/>
         </designable>
         <designable name="TnE-us-8H2">
-            <size key="intrinsicContentSize" width="76.5" height="22"/>
+            <size key="intrinsicContentSize" width="90.5" height="27"/>
         </designable>
         <designable name="ZSi-JA-zoJ">
-            <size key="intrinsicContentSize" width="76.5" height="22"/>
+            <size key="intrinsicContentSize" width="90.5" height="27"/>
         </designable>
         <designable name="bEO-QK-64U">
-            <size key="intrinsicContentSize" width="52" height="23.5"/>
+            <size key="intrinsicContentSize" width="66" height="28.5"/>
         </designable>
         <designable name="dOZ-IJ-Dhb">
-            <size key="intrinsicContentSize" width="48.5" height="23.5"/>
+            <size key="intrinsicContentSize" width="62.5" height="28.5"/>
         </designable>
     </designables>
     <resources>

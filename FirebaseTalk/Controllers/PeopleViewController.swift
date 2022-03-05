@@ -28,6 +28,8 @@ class PeopleViewController: UIViewController {
         
         Database.database().reference().child("users").observe(DataEventType.value) { snapshop in
             self.array.removeAll()
+            
+            let myUid = Auth.auth().currentUser?.uid
             for child in snapshop.children {
                 guard let fChild = child as? DataSnapshot else { continue }
                 let userModel = UserModel()
@@ -36,6 +38,8 @@ class PeopleViewController: UIViewController {
                 userModel.userName = fValue["userName"] as? String
                 userModel.profileImageURL = fValue["profileImageURL"] as? String
                 userModel.uid = fValue["uid"] as? String
+                
+                if userModel.uid == myUid { continue }
                 self.array.append(userModel)
             }
             
