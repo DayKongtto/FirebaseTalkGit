@@ -28,6 +28,8 @@ class PeopleViewController: UIViewController {
         
         Database.database().reference().child("users").observe(DataEventType.value) { snapshop in
             self.array.removeAll()
+            
+            let myUid = Auth.auth().currentUser?.uid
             for child in snapshop.children {
                 guard let fChild = child as? DataSnapshot else { continue }
                 let userModel = UserModel()
@@ -35,6 +37,9 @@ class PeopleViewController: UIViewController {
                 guard let fValue = fChild.value as? [String: Any] else { continue }
                 userModel.userName = fValue["userName"] as? String
                 userModel.profileImageURL = fValue["profileImageURL"] as? String
+                userModel.uid = fValue["uid"] as? String
+                
+                if userModel.uid == myUid { continue }
                 self.array.append(userModel)
             }
             
@@ -92,9 +97,9 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let view = self.storyboard?
-                .instantiateViewController(withIdentifier: "ChatViewController")
+                .instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController
         else { return }
-        
+        view.destinationUid = array[indexPath.row].uid
         self.navigationController?.pushViewController(view, animated: true)
     }
 }
