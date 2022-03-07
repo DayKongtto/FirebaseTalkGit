@@ -20,7 +20,7 @@ class ChatViewController: UIViewController {
     var uid: String?
     var chatRoomUid: String?
     var userModel: UserModel?
-    var commnts: [ChatModel.Comments] = []
+    var comments: [ChatModel.Comments] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,6 @@ class ChatViewController: UIViewController {
         uid = Auth.auth().currentUser?.uid
         sendButton?.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
         checkChatRoom()
-        self.tabBarController?.tabBar.isHidden = true
-        
 //        let tap: UIGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 //        view.addGestureRecognizer(tap)
     }
@@ -37,11 +35,7 @@ class ChatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setKeyboardNotification()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -76,8 +70,8 @@ class ChatViewController: UIViewController {
                   let keyboardHeight = keyboardRectangle.height
               UIView.animate(withDuration: 1) {
                   self.bottomConstraint?.constant = keyboardHeight
-                  if self.commnts.count > 0 {
-                      self.tableView?.scrollToRow(at: IndexPath(item: self.commnts.count - 1, section: 0),
+                  if self.comments.count > 0 {
+                      self.tableView?.scrollToRow(at: IndexPath(item: self.comments.count - 1, section: 0),
                                                   at: UITableView.ScrollPosition.bottom, animated: true)
                   }
               }
@@ -108,7 +102,8 @@ class ChatViewController: UIViewController {
             guard let message = messageTextfield?.text else { return }
             let comment: [String: Any] = [
                 "uid": sUid,
-                "message": message
+                "message": message,
+                "timestamp": ServerValue.timestamp()
             ]
             
             Database.database().reference().child("chatRooms").child(chatRoomUid!)
@@ -154,17 +149,17 @@ class ChatViewController: UIViewController {
         guard let roomUid = chatRoomUid else { return }
         Database.database().reference().child("chatRooms").child(roomUid).child("comments")
             .observe(DataEventType.value) { dataSnapshot in
-                self.commnts.removeAll()
+                self.comments.removeAll()
                 guard let items = dataSnapshot.children.allObjects as? [DataSnapshot] else { return }
                 for item in items {
                     guard let itemValue = item.value as? [String: AnyObject] else { return }
                     guard let comment = ChatModel.Comments(JSON: itemValue) else { return }
-                    self.commnts.append(comment)
+                    self.comments.append(comment)
                 }
                 self.tableView?.reloadData()
                 
-                if self.commnts.count > 0 {
-                    self.tableView?.scrollToRow(at: IndexPath(item: self.commnts.count - 1, section: 0),
+                if self.comments.count > 0 {
+                    self.tableView?.scrollToRow(at: IndexPath(item: self.comments.count - 1, section: 0),
                                                 at: UITableView.ScrollPosition.bottom, animated: true)
                 }
             }
@@ -184,25 +179,45 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commnts.count
+        return comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if self.commnts[indexPath.row].uid == uid {
+        if self.comments[indexPath.row].uid == uid {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell",
                                                            for: indexPath)
                     as? MyMessageCell else { return UITableViewCell() }
-            cell.messageLabel?.text = commnts[indexPath.row].message
+            cell.nameLabel?.text = userModel?.userName
+            cell.messageLabel?.text = comments[indexPath.row].message
             cell.messageLabel?.numberOfLines = 0
+            
+            guard let time = comments[indexPath.row].timestamp?.toDayTime else { return cell }
+            cell.timestampLabel?.text = time
+            
+            guard let urlString = userModel?.profileImageURL else { return cell }
+            guard let url = URL(string: urlString) else { return cell }
+            guard let imageView = cell.profileImageView else { return cell }
+                                
+            URLSession.shared.dataTask(with: url, completionHandler: { data, _, _ in
+                DispatchQueue.main.async {
+                    imageView.image = UIImage(data: data!)
+                    imageView.layer.cornerRadius = imageView.frame.size.width / 2
+                    imageView.clipsToBounds = true
+                }
+            }).resume()
+            
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell",
                                                            for: indexPath)
                     as? DestinationMessageCell else { return UITableViewCell() }
             cell.nameLabel?.text = userModel?.userName
-            cell.messageLabel?.text = commnts[indexPath.row].message
+            cell.messageLabel?.text = comments[indexPath.row].message
             cell.messageLabel?.numberOfLines = 0
+            
+            guard let time = comments[indexPath.row].timestamp?.toDayTime else { return cell }
+            cell.timestampLabel?.text = time
             
             guard let urlString = userModel?.profileImageURL else { return cell }
             guard let url = URL(string: urlString) else { return cell }

@@ -24,6 +24,9 @@
 		69382737271C656E008AFB88 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */; };
 		69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69382738271C6B22008AFB88 /* LoginViewController.swift */; };
 		693A767127B88FE600ADB2B2 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A767027B88FE600ADB2B2 /* RemoteConfig.swift */; };
+		6992B4BE27D5D71900297211 /* ChatRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6992B4BD27D5D71900297211 /* ChatRoomsViewController.swift */; };
+		6992B4C027D5F8D900297211 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6992B4BF27D5F8D900297211 /* RowCell.swift */; };
+		6992B4C227D6103F00297211 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6992B4C127D6103F00297211 /* Int.swift */; };
 		69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A125F9279CDEB50067AA32 /* SignupViewController.swift */; };
 		69A8B49627AFEAC10062B973 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 69A8B49527AFEAC10062B973 /* .swiftlint.yml */; };
 		69D8D9E1271D52A3003EBE87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */; };
@@ -51,6 +54,9 @@
 		69382736271C656E008AFB88 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		69382738271C6B22008AFB88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		693A767027B88FE600ADB2B2 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		6992B4BD27D5D71900297211 /* ChatRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsViewController.swift; sourceTree = "<group>"; };
+		6992B4BF27D5F8D900297211 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		6992B4C127D6103F00297211 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		69A125F9279CDEB50067AA32 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		69A8B49527AFEAC10062B973 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		69D8D9E0271D52A3003EBE87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 				692C831927D38E36000BA107 /* MyMessageCell.swift */,
 				692C831B27D39034000BA107 /* DestinationMessageCell.swift */,
 				692C831D27D3BF7A000BA107 /* PeopleViewCell.swift */,
+				6992B4BF27D5F8D900297211 /* RowCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 				69A125F9279CDEB50067AA32 /* SignupViewController.swift */,
 				690A1A7C27AFC9F10056BE12 /* PeopleViewController.swift */,
 				6925022927D243150099C323 /* ChatViewController.swift */,
+				6992B4BD27D5D71900297211 /* ChatRoomsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			children = (
 				69382734271C64D2008AFB88 /* UIColor.swift */,
 				693A767027B88FE600ADB2B2 /* RemoteConfig.swift */,
+				6992B4C127D6103F00297211 /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,10 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6992B4C027D5F8D900297211 /* RowCell.swift in Sources */,
 				69382739271C6B22008AFB88 /* LoginViewController.swift in Sources */,
+				6992B4BE27D5D71900297211 /* ChatRoomsViewController.swift in Sources */,
 				69A125FA279CDEB50067AA32 /* SignupViewController.swift in Sources */,
 				6925022C27D25BB90099C323 /* ChatModel.swift in Sources */,
 				6926078D271ADC94005321D8 /* AppDelegate.swift in Sources */,
+				6992B4C227D6103F00297211 /* Int.swift in Sources */,
 				6926078F271ADC94005321D8 /* SceneDelegate.swift in Sources */,
 				69382733271AFA8E008AFB88 /* SplashViewController.swift in Sources */,
 				692C831C27D39034000BA107 /* DestinationMessageCell.swift in Sources */,

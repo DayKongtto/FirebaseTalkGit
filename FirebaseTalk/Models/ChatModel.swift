@@ -28,10 +28,12 @@ class ChatModel: Mappable {
         func mapping(map: Map) {
             uid <- map["uid"]
             message <- map["message"]
+            timestamp <- map["timestamp"]
         }
         
         var uid: String?
         var message: String?
+        var timestamp: Int?
         
     }
 }
