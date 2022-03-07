@@ -16,6 +16,7 @@ class PeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
         
         tableView.delegate = self
         tableView.dataSource = self

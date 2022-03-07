@@ -1,17 +1,17 @@
 //
-//  DestinationMessageCell.swift
+//  RowCell.swift
 //  FirebaseTalk
 //
-//  Created by PSJ on 2022/03/05.
+//  Created by PSJ on 2022/03/07.
 //
 
 import UIKit
 
-class DestinationMessageCell: UITableViewCell {
+class RowCell: UITableViewCell {
 
-    @IBOutlet weak var profileImageView: UIImageView?
-    @IBOutlet weak var nameLabel: UILabel?
-    @IBOutlet weak var messageLabel: UILabel?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var lastMessageLabel: UILabel?
+    @IBOutlet weak var imageview: UIImageView?
     @IBOutlet weak var timestampLabel: UILabel?
     
     override func awakeFromNib() {
