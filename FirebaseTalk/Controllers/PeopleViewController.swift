@@ -19,7 +19,7 @@ class PeopleViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(PeopleViewCell.self, forCellReuseIdentifier: "Cell")
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.equalTo(view)
@@ -57,10 +57,10 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+                as? PeopleViewCell else { return UITableViewCell() }
         
-        let imageView = UIImageView()
-        cell.addSubview(imageView)
+        guard let imageView = cell.imageview else { return UITableViewCell() }
         imageView.snp.makeConstraints { make in
             make.centerY.equalTo(cell)
             make.left.equalTo(cell).offset(10)
@@ -78,8 +78,7 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }).resume()
         
-        let label = UILabel()
-        cell.addSubview(label)
+        guard let label = cell.label else { return UITableViewCell() }
         label.snp.makeConstraints { make in
             make.centerY.equalTo(cell)
             make.left.equalTo(imageView.snp.right).offset(20)
